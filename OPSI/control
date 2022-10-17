@@ -1,0 +1,55 @@
+[Package]
+version: 3
+depends: 
+
+[Product]
+type: localboot
+id: msoffice2019
+name: Microsoft Office 2019
+description: Office 2019 ProPlus VL
+advice: 
+version: 1804
+priority: 0
+licenseRequired: False
+productClasses: 
+setupScript: setup32.opsiscript
+uninstallScript: uninstall32.opsiscript
+updateScript: 
+alwaysScript: 
+onceScript: 
+customScript: 
+userLoginScript: 
+
+[ProductProperty]
+type: unicode
+name: install_server
+multivalue: False
+editable: True
+description: FQDN from Server hosting the installation files
+values: []
+default: []
+
+[ProductProperty]
+type: unicode
+name: install_share
+multivalue: False
+editable: True
+description: Network share on the server where the files are hosted
+values: []
+default: []
+
+[ProductProperty]
+type: bool
+name: install_office
+description: Office installieren?/Install Office?
+default: True
+
+[ProductProperty]
+type: unicode
+name: office86_xml
+multivalue: False
+editable: True
+description: Filename of office x86 config file
+values: []
+default: []
+

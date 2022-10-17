@@ -1,0 +1,30 @@
+DefVar $Office$
+DefVar $MinimumSpace$
+DefVar $InstallServer$
+DefVar $InstallShare$
+DefVar $MountPoint$
+DefVar $ProductId$
+DefVar $ProductVersion$
+DefVar $ExitCode$
+DefVar $SetupFile$
+DefVar $GuestLogonRegistryValue$
+DefVar $GuestLogonRegistry$
+DefVar $GuestLogonRegistryKey$
+DefVar $O86xml$
+DefVar $O86Removexml$
+
+DefVar $OfficeEN$
+DefVar $OfficeDE$
+
+Set $ProductId$ = "Microsoft Office 2019"
+Set $MountPoint$ = "O:"
+Set $InstallServer$ = GetProductProperty("install_server", "FQDN")
+Set $InstallShare$ = GetProductProperty("install_share", "ODT")
+Set $Office$ = GetProductProperty("install_office", "true")
+Set $ProductVersion$ = "x86"
+Set $MinimumSpace$ = "5 GB"
+Set $SetupFile$ = $MountPoint$ + "\setup.exe"
+Set $GuestLogonRegistry$ = "HKLM\Software\Policies\Microsoft\Windows\LanmanWorkstation"
+Set $GuestLogonRegistryKey$ = "AllowInsecureGuestAuth"
+
+Set $O86xml$ = GetProductProperty("office86_xml", "office86.xml")
